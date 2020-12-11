@@ -17,6 +17,24 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
+  "jest": {
+    "collectCoverageFrom": [
+      "src/**/*.{js,jsx,ts,tsx}",
+      "src/**/*.test.{js,jsx,ts,tsx}",
+      "!src/**/*.style.js",
+      "!src/**/*.style.constants.js",
+      "!<rootDir>/node_modules/**",
+      "!src/serviceWorker.js",
+      "!src/index.jsx",
+      "!src/store.js",
+      "!src/pages/Upload/**"
+    ],
+    "coverageReporters": [
+      "html",
+      "lcov",
+      "text-summary"
+    ]
+  },
   "eslintConfig": {
     "extends": [
       "react-app",

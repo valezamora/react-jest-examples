@@ -1,19 +1,23 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
+import OneClickButton from "./components/OneClickButton/oneClickButton";
+import ProfileDetails from "./components/ProfileDetails/profileDetails";
 
-function App() {
+const App = () => {
+  const profile = {
+    name: 'Valeria',
+    email: 'valezamora@gmail.com'
+  };
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
+        <ProfileDetails data={profile} />
+        <OneClickButton />
         <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
+            className="App-link"
+            href="https://reactjs.org"
+            target="_blank"
+            rel="noopener noreferrer"
         >
           Learn React
         </a>
